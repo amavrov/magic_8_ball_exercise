@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blue,
+        body: HomePage(),
+        backgroundColor: Colors.blue.shade900,
         appBar: AppBar(
           backgroundColor: Colors.black,
           title: Text('Ask me anything'),
@@ -44,8 +45,10 @@ class _HomePageState extends State<HomePage> {
       children: <Widget>[
         Expanded(
           child: TextButton(
-            child: Image.asset('ball$ballState'),
-            onPressed: () {},
+            child: Image.asset('images/ball$ballState.png'),
+            onPressed: () {
+              shakeBall();
+            },
           ),
         ),
       ],
